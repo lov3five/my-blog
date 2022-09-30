@@ -12,6 +12,25 @@
     box-sizing: border-box;
 }
 
+/* Global */
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.typewriter h1 { 
+	font: bold 200% Consolas, monospace;
+	border-right: .1em solid aqua;
+	width: 16.5em; 
+	width: 30ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 3s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
+    color: aqua;
+}
+
+
+
 .wrapper {
     background-color: var(--background-color);
 }
@@ -24,27 +43,35 @@
     margin: 0px 120px 0px 120px;
     align-items: center;
     justify-items: center;
-    
+
 }
 
+/* Header > Logo */
 .logo-container {
-    flex: 2;
+    flex: 1;
     height: 100%;
     padding: 0px 20px 0px 20px;
+    width: 100%;
 }
 
 #logo {
     color: aqua;
-    font-size: 60px;
-    line-height: 100px;
+    vertical-align: middle;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+
 }
 
+#logo h1 {
+    padding-top: 25px;
+}
+
+/* Header > Nav */
 .nav {
     flex: 5;
     text-align: center;
-    
+
 }
 
 .nav li {
@@ -56,22 +83,42 @@
     display: block;
     text-decoration: none;
     padding: 20px;
-    font-size: 25px;
+    font-size: 20px;
     color: aliceblue;
     font-family: var(--font-roboto);
 }
 
+.nav li a:hover {
+    color: aqua;
+}
+
+.nav li a.active {
+    color: aqua;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    -moz-text-decoration-color: aqua;
+    text-decoration-thickness: 5px;
+}
+
+/* Header > MyCV */
 .download-cv {
     flex: 2;
     text-align: center;
 }
 
-#btn-download-cv{
+#btn-download-cv {
     padding: 10px 20px 10px 20px;
-    border: 1px solid #ff3300;
+    border: 1px solid #00ff00;
     border-radius: 5px;
     text-transform: uppercase;
-    background-color: #ff3300;
+    background-color: #00ff00;
     color: white;
     width: 80%;
+    font-weight: bold;
+}
+
+/* Main */
+.main {
+    background-color: rgb(27, 21, 51);
 }
