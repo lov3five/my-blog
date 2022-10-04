@@ -61,7 +61,14 @@
     margin: 0px 120px 0px 120px;
     align-items: center;
     justify-items: center;
-
+    /* Prohibit highlighting and copying the text*/
+    -moz-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
 }
 
 /* Header > Logo */
@@ -113,10 +120,6 @@
 .nav li a.active {
     color: aqua;
     font-weight: bolder;
-    text-decoration: underline;
-    text-decoration-color: aqua;
-    -moz-text-decoration-color: aqua;
-    text-decoration-thickness: 5px;
 }
 
 /* Header > MyCV */
@@ -127,10 +130,10 @@
 
 #btn-download-cv {
     line-height: 37px;
-    border: 1px solid #00ff00;
+    border: 1px solid  #00b300;
     border-radius: 5px;
     text-transform: uppercase;
-    background-color: #00ff00;
+    background-color:  #00b300;
     color: white;
     width: 70%;
     font-weight: bold;
@@ -138,7 +141,7 @@
 
 /* Main */
 .main {
-    background-color: rgb(27, 21, 51);
+    background-color: rgb(13, 52, 75);
     height: calc(100vh - (var(--height-header) + var(--height-footer)));
 }
 
@@ -192,6 +195,7 @@
     padding-left: 20px;
     font-family: var(--font-montserrat);
     color: white;
+    display: flex;
 }
 
 
