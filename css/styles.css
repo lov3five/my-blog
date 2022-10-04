@@ -1,6 +1,5 @@
 /* Font  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
-/* Icon */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&family=Poppins:wght@800&family=Roboto&display=swap');/* Icon */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 :root {
@@ -16,7 +15,8 @@
     box-sizing: border-box;
 }
 
-body {
+/* Prohibit highlighting and copying text */
+/* body {
     -moz-user-select: none !important;
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
@@ -24,7 +24,7 @@ body {
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
-}
+} */
 
 /* Global */
 @-webkit-keyframes typing {
@@ -139,16 +139,53 @@ body {
 }
 
 .intro {
+    margin-top: 0px;
     margin-left: 120px;
+    margin-right: 120px;
+    font-family: var(--font-poppins);
+    /* Prohibit highlighting and copying the text*/
+    -moz-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
 }
 
 .intro .text-hello {
     color: gray;
     font-weight: bolder;
-    font-size: 200px;
-    font-family: var(--font-poppins);
+    font-size: 180px;
     opacity: 0.5;
+}
 
+.intro .text-intro{
+    margin-top: -40px;
+    font-size:70px;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Oswald' !important;
+}
+
+.intro .text-intro .upper-text {
+    text-transform: uppercase;
+}
+
+.intro .underline{
+    height: 10px;
+    width: 260px;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.footer-text{
+    text-align: center;
+}
+
+.footer-text p{
+    line-height: 55px;
+    color: white;
 }
 
 @keyframes fadeInUp {
