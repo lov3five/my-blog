@@ -16,20 +16,9 @@
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
-.typewriter h1 { 
-	font: bold 200% Consolas, monospace;
-	border-right: .1em solid aqua;
-	width: 16.5em; 
-	width: 30ch;
-	margin: 2em 1em;
-	white-space: nowrap;
-	overflow: hidden;
-	-webkit-animation: typing 3s steps(21, end),
-	           blink-caret .5s step-end infinite alternate;
-    color: aqua;
+.typewriter { 
+	text-align: center;
 }
-
-
 
 .wrapper {
     background-color: var(--background-color);
@@ -71,6 +60,7 @@
 .nav {
     flex: 5;
     text-align: center;
+    text-transform: uppercase;
 
 }
 
@@ -121,4 +111,11 @@
 /* Main */
 .main {
     background-color: rgb(27, 21, 51);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
