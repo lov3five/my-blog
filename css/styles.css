@@ -7,6 +7,9 @@
     --font-montserrat: 'Montserrat', sans-serif;
     --font-roboto: 'Roboto', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
+
+    --height-header: 100px;
+    --height-footer: 100px;
 }
 
 * {
@@ -41,6 +44,7 @@
 
 .typewriter {
     text-align: center;
+    height: 60px;
 }
 
 
@@ -135,10 +139,11 @@
 /* Main */
 .main {
     background-color: rgb(27, 21, 51);
-    height: 500px;
+    height: calc(100vh - (var(--height-header) + var(--height-footer)));
 }
 
 .intro {
+    
     margin-top: 0px;
     margin-left: 120px;
     margin-right: 120px;
@@ -160,7 +165,8 @@
     opacity: 0.5;
 }
 
-.intro .text-intro{
+.intro .text-intro{ 
+    padding-left: 20px;
     margin-top: -40px;
     font-size:70px;
     color: white;
@@ -173,12 +179,23 @@
 }
 
 .intro .underline{
-    height: 10px;
-    width: 260px;
-    background-color: aqua;
+    height: 6px;
+    width: 100px;
+    background-color: aquamarine;
     border-radius: 5px;
+    margin-left: 20px;
+    padding-left: 20px;
 }
 
+.intro .text-desc{
+    margin-top: 10px;
+    padding-left: 20px;
+    font-family: var(--font-montserrat);
+    color: white;
+}
+
+
+/* Footer */
 .footer-text{
     text-align: center;
 }
