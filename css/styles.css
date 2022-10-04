@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+/* Font  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
+/* Icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 :root {
     --background-color: rgba(34, 40, 49, 1);
     --font-montserrat: 'Montserrat', sans-serif;
     --font-roboto: 'Roboto', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
 }
 
 * {
@@ -12,13 +16,34 @@
     box-sizing: border-box;
 }
 
-/* Global */
-@-webkit-keyframes typing { from { width: 0; } }
-@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
-
-.typewriter { 
-	text-align: center;
+body {
+    -moz-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
 }
+
+/* Global */
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typewriter {
+    text-align: center;
+}
+
+
 
 .wrapper {
     background-color: var(--background-color);
@@ -39,7 +64,6 @@
 .logo-container {
     flex: 1;
     height: 100%;
-    padding: 0px 20px 0px 20px;
     width: 100%;
 }
 
@@ -98,19 +122,33 @@
 }
 
 #btn-download-cv {
-    padding: 10px 20px 10px 20px;
+    line-height: 37px;
     border: 1px solid #00ff00;
     border-radius: 5px;
     text-transform: uppercase;
     background-color: #00ff00;
     color: white;
-    width: 80%;
+    width: 70%;
     font-weight: bold;
 }
 
 /* Main */
 .main {
     background-color: rgb(27, 21, 51);
+    height: 500px;
+}
+
+.intro {
+    margin-left: 120px;
+}
+
+.intro .text-hello {
+    color: gray;
+    font-weight: bolder;
+    font-size: 200px;
+    font-family: var(--font-poppins);
+    opacity: 0.5;
+
 }
 
 @keyframes fadeInUp {
