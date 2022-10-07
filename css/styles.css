@@ -13,6 +13,10 @@
     --height-footer: 100px;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -54,13 +58,20 @@
     text-transform: uppercase;
 }
 
-.clear-both{
+.clear-both {
     clear: both;
 }
 
-.container{
+.container {
     display: flex;
 }
+
+.box-container {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 /*  */
 
 .typewriter {
@@ -72,16 +83,25 @@
     background-color: var(--background-color);
 }
 
+.fixed{
+    z-index: 999;
+    position: sticky;
+    top: 0px;
+    
+}
+
 .info-contact {
     background-color: #04AA6D;
 }
 
 /* Header */
 .header {
+    background-color: var(--background-color);
+    top: 0px;
     display: flex;
     height: 100px;
     width: auto;
-    margin: 0px 120px 0px 120px;
+    padding: 0px 120px 0px 120px;
     align-items: center;
     justify-items: center;
     /* Prohibit highlighting and copying the text*/
@@ -166,14 +186,13 @@
 /* Main */
 .main {
     background-color: rgb(13, 52, 75);
-    height: calc(100vh - (var(--height-header) + var(--height-footer)));
     width: 100vw;
 }
 
 .main .intro-container {
     padding: 0px 120px 0px 120px;
     width: 100vw;
-    -webkit-box-align: center!important;
+    -webkit-box-align: center !important;
 }
 
 .main .intro-container .intro {
@@ -225,7 +244,7 @@
 .main .intro-container .img-banner {
     display: flex;
     position: relative;
-    
+
 }
 
 .main .img-banner .my-image {
@@ -235,21 +254,105 @@
     margin: auto;
     justify-items: center;
     align-items: center;
+}
+
+/* What I do */
+.main .what-i-do {
+    background-color: rgb(14, 45, 58);
+}
+
+.title {
+
+}
+
+.title .text {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--font-roboto);
+    color: white;
+
+}
+
+.title .text-cover {
+    margin-top: 0px;
+    font-size: 250%;
+    text-align: center;
+    font-family: var(--font-poppins);
+    color: rgb(99, 99, 99);
+    opacity: 0.8;
+}
+
+.content {
+    width: 80vw;
+    height: auto;
+    margin: auto;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 50px;
+    align-items: center;
+    justify-items: center;
+}
+
+.icon-container .icon-item {
+    flex: 1;
+    height: 200px;
+    border: 2px solid #00d9ff;
+    border-radius: 25px;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.icon-container .icon-item p {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+/*  */
+
+/* Skills */
+.content .icon-skill-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.icon-box {
+    position: relative;
+    width: 60px;
+    background-color: #2b2727;
+    height: 60px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0px 10px 0px 10px;
+    box-shadow: 0px 10px 10px rgb(0 0 0 / 30%);
+    border: 2px solid transparent;
+    top: 0;
+    transition: top ease 0.6s;
+    transition: height width linear 0.25s;
     
 }
 
-.main .container{
-    margin-top: 20px;
+.icon-box:hover{
+    border: 2px solid aqua;
+    top: -15px;
+    width: 75px;
+    height: 75px;
 }
 
-.main .container .line-border{
-   flex: 4;
-    width: 100%;
-    height: 2px;
-    background-color: aqua;
-}
 
 /* Footer */
+.footer {
+    width: 100vw;
+    bottom: 0px;
+}
+
 .footer-text {
     text-align: center;
 
@@ -266,3 +369,42 @@
         transform: translateY(0);
     }
 }
+
+@keyframes turnAround {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ferris {
+
+}
+
+@keyframes up-top-20px{
+    0% {
+        margin-top: -0px;
+    }
+    50% {
+        margin-top: -10px;
+    }
+    100% {
+        margin-top: -20px;
+    }
+}
+
