@@ -318,25 +318,30 @@ html {
 .icon-container {
     display: flex;
     flex-direction: row;
-    padding: 0px;
     gap: 50px;
-    align-items: center;
-    justify-items: center;
 }
 
 .icon-container .icon-item {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     height: 200px;
     border: 2px solid #00d9ff;
     border-radius: 25px;
     align-items: center;
-    opacity: 0.6;
+    height: auto;
 }
 
-.icon-container .icon-item p {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
+.icon-container .icon-item .icon {
+    font-size: 150px;
+    color: aqua;
+}
+
+.icon-item .icon-desc {
+    font-size: 20px;
+    color: white;
+    font-family: var(--font-poppins);
+    margin-top: -20px;
 }
 
 /*  */
